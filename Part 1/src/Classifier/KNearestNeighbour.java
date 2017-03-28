@@ -93,7 +93,6 @@ public class KNearestNeighbour {
                         break;
                 }
             }
-            System.out.println("a " + setosaCount + ",b " + versicolorCount + ", c " + virginicaCount);
             if (setosaCount >= versicolorCount && setosaCount >= virginicaCount) {
                 if (testIris.getClassName().equalsIgnoreCase("Iris-setosa")) {
                     correctCounter++;

@@ -20,17 +20,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Reader readTestSet = new Reader(TEST);
-        Reader readTrainingSet = new Reader(TRAINING);
+        // Reader readTestSet = new Reader(TEST);
+        // Reader readTrainingSet = new Reader(TRAINING);
 
-        List<Iris> testSet = readTestSet.getCollection();
-        List<Iris> trainingSet = readTrainingSet.getCollection();
+        if (args.length != 2) {
+            System.out.println("Incorrect parameters");
+        } else {
+            Reader readTestSet = new Reader(args[0]);
+            Reader readTrainingSet = new Reader(args[1]);
+            List<Iris> testSet = readTestSet.getCollection();
+            List<Iris> trainingSet = readTrainingSet.getCollection();
 
-        KNearestNeighbour kNN = new KNearestNeighbour(testSet, trainingSet, k);
-        kNN.classify();
-
-        if (args.length == 2) {
-            // do the thing
+            KNearestNeighbour kNN = new KNearestNeighbour(testSet, trainingSet, k);
+            kNN.classify();
         }
     }
 }
