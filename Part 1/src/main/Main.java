@@ -4,12 +4,9 @@ import Classifier.Reader;
 import Classifier.Iris;
 import Classifier.KNearestNeighbour;
 import java.util.List;
+
 /**
  * Created by nztyler on 28/03/17.
- * Hey bro, happy birthday! I hope youve had a good one and it hasnt been
- * entirely stress from uni. If my classes and are stressful already then I cant
- * imagine how an archie feels.... anyway hope its been good :) catch ya later bro
- *
  */
 public class Main {
 
