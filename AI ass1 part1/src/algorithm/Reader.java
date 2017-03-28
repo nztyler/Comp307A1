@@ -31,12 +31,15 @@ public class Reader {
 				}
 				line = br.readLine();
 			}
+			br.close();
 			
 		} catch (IOException | IndexOutOfBoundsException e) {
 			e.printStackTrace();
-		} finally {
-			// br.close();
 		}
+	}
+	
+	public List<Iris> getCollection() {
+		return irisCollection;
 	}
 	
 	public String toString() {

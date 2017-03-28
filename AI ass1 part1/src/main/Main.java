@@ -14,9 +14,11 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		String file = TEST;
+		Reader readTestSet = new Reader(TEST);
+		Reader readTrainingSet = new Reader(TRAINING);
 		
-		Reader readFile = new Reader(file);
+		// List<Iris> testSet = readTestSet.
+		
 		System.out.println(readFile.toString());
 		
 		if (args.length == 2) {
