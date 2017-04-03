@@ -1,8 +1,3 @@
-package main;
-
-import Classifier.Reader;
-import Classifier.Iris;
-import Classifier.KNearestNeighbour;
 import java.util.List;
 import java.util.Scanner;
 
