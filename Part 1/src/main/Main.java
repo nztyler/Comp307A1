@@ -4,6 +4,7 @@ import Classifier.Reader;
 import Classifier.Iris;
 import Classifier.KNearestNeighbour;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * Created by nztyler on 28/03/17.
@@ -15,8 +16,6 @@ public class Main {
     public static final String TRAINING = "iris-training.txt";
     public static final String DATA = "iris.data";
     public static final String NAMES = "iris.names";
-
-    private static int k = 3;
 
     public static void main(String[] args) {
 
@@ -31,6 +30,10 @@ public class Main {
             List<Iris> testSet = readTestSet.getCollection();
             List<Iris> trainingSet = readTrainingSet.getCollection();
 
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Please enter a value for K...");
+            int k = Integer.parseInt(scanner.next());
+            System.out.println(k + " is K");
             KNearestNeighbour kNN = new KNearestNeighbour(testSet, trainingSet, k);
             kNN.classify();
         }
