@@ -1,5 +1,3 @@
-package Algorithm;
-
 import java.util.List;
 import java.util.ArrayList;
 /**
@@ -13,6 +11,14 @@ public class Instance {
     public Instance(List<String> attributes) {
         className = attributes.remove(0); //need to check index in bounds?
         this.attributes = attributes;
+    }
+
+    public String getClassName() {
+        return className;
+    }
+
+    public List<String> getAttributes() {
+        return attributes;
     }
 
     @Override

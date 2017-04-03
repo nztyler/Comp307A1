@@ -1,2 +1,5 @@
-# In this directory run this command for Part 1
-java -jar Part\ 1/out/artifacts/Part_1_jar/Part\ 1.jar  Part\ 1/iris-test.txt Part\ 1/iris-training.txt
+#Part 1
+# Go to the directory /Part 1/src and run this command
+java Main ../iris-test.txt ../iris-training.txt 
+
+#Part 2

@@ -1,5 +1,3 @@
-package Algorithm;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -47,12 +45,12 @@ public class Reader {
         return classes;
     }
 
+    public List<String> getAttributes() { return attributes; }
+
     public List<Instance> getInstances() {
         return instances;
     }
 
     @Override
-    public String toString() {
-        return null;
-    }
+    public String toString() { return null; }
 }
