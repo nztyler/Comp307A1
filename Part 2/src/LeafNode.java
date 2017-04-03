@@ -13,4 +13,13 @@ public class LeafNode extends Node{
     public double getProbability() {
         return probability;
     }
+
+    public void report(String indent) {
+        if (probability == 0) {
+            System.out.format("%sUnknown\n", indent);
+        } else {
+            System.out.format("%sClass %s, prob=$4.2f\n",
+                    indent, getClass(), probability);
+        }
+    }
 }

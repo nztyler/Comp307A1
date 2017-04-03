@@ -12,4 +12,6 @@ public abstract class Node {
     public String getName() {
         return name;
     }
+
+    public abstract void report(String text);
 }

@@ -19,4 +19,13 @@ public class InnerNode extends Node{
     public Node getRight() {
         return right;
     }
+
+    public void report(String indent){
+        System.out.format("%s%s = True:\n",
+                indent, getName());
+        left.report(indent + "    ");
+        System.out.format("%s%s = False:\n",
+                indent, getName());
+        right.report(indent + "    ");
+    }
 }

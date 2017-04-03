@@ -106,7 +106,7 @@ public class KNearestNeighbour {
             }
         }
         System.out.println("Correct count is " + correctCounter + " out of 75");
-        System.out.println("That is an accuracy of " + (double)correctCounter/testSet.size()*100);
+        System.out.println("That is an accuracy of " + (double)correctCounter/testSet.size()*100 + "%");
 
     }
 
