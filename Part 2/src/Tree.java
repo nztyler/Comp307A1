@@ -26,7 +26,6 @@ public class Tree {
 
     public Node buildTree(List<Instance> instances, List<String> attributes) {
         if (instances.isEmpty()) {
-            // return a leaf node containing the name and prob of the overall most probable class
             int counter = 0;
             for (int i = 0; i < inst.size(); i++) {
                 if (inst.get(i).getClassName().equals(classes.get(0))) {
@@ -74,6 +73,8 @@ public class Tree {
                     trueCount++;
                     }
                 }
+                System.out.println(trueCount + "/" + trueIns.size() + "*(" + trueIns.size() + "-"
+                        + trueCount + ")/" + trueIns.size());
                 double trueImp = (trueCount / trueIns.size()) * ((trueIns.size() - trueCount) / trueIns.size());
                 double pFalse = falseIns.size() / (double) attributes.size();
                 trueCount = 0;
@@ -125,6 +126,8 @@ public class Tree {
         private List<Instance> falseInstances;
 
         public InstanceTuple(List<Instance> instances, int attributeIndex) {
+            trueInstances = new ArrayList<Instance>();
+            falseInstances = new ArrayList<Instance>();
             for (Instance ins : instances) {
                 if (ins.getAttributes().get(attributeIndex).equals("true")) {
                     trueInstances.add(ins);

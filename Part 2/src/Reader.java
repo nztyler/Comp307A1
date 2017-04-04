@@ -28,7 +28,7 @@ public class Reader {
 
             String instanceData = br.readLine();
             while (instanceData != null) {
-                Instance val = new Instance(Arrays.asList(instanceData.split("\\s+")));
+                Instance val = new Instance(new ArrayList<String>(Arrays.asList(instanceData.split("\\s+"))));
                 instances.add(val);
                 instanceData = br.readLine();
             }

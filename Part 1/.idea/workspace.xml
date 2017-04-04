@@ -48,8 +48,8 @@
       <file leaf-file-name="KNearestNeighbour.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/KNearestNeighbour.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="108" column="101" lean-forward="false" selection-start-line="108" selection-start-column="101" selection-end-line="108" selection-end-column="101" />
+            <state relative-caret-position="1010">
+              <caret line="104" column="15" lean-forward="false" selection-start-line="104" selection-start-column="15" selection-end-line="104" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,7 +154,8 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Part 2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -640,8 +641,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/KNearestNeighbour.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="108" column="101" lean-forward="false" selection-start-line="108" selection-start-column="101" selection-end-line="108" selection-end-column="101" />
+        <state relative-caret-position="1010">
+          <caret line="104" column="15" lean-forward="false" selection-start-line="104" selection-start-column="15" selection-end-line="104" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
