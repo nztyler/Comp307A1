@@ -8,11 +8,16 @@ public class Main {
     public static final String GTRAINING = "golf-training.dat";
 
     public static void main(String[] args) {
-        Reader reader = new Reader(GTRAINING);
-        Tree tree = new Tree(reader.getInstances(), reader.getAttributes(), reader.getClasses());
-        Node root = tree.buildTree();
+        if (args.length != 2) {
+            System.out.println("Incorrect parameters");
+        } else {
+            Reader reader = new Reader(args[0]);
+            Tree tree = new Tree(reader.getInstances(), reader.getAttributes(), reader.getClasses());
+            Node root = tree.buildTree();
 
-        root.report("\t");
+            root.report("\t");
+
+        }
     }
 
 }
