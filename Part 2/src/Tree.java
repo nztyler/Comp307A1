@@ -53,7 +53,11 @@ public class Tree {
             } else {
                 return new LeafNode(classes.get(1),counter / instances.size());
             }
-        } else { // find the best attribute
+        }
+
+
+
+        else { // find the best attribute
             int bestAttributeIndex = -1;
             double bestImpurity = Double.MAX_VALUE;
 
@@ -62,34 +66,37 @@ public class Tree {
 
             for (int i = 0; i < attributes.size(); i++) {
                 InstanceTuple tuple = new InstanceTuple(instances, i);
-                List<Instance> trueIns = tuple.getTrueInstances();
-                List<Instance> falseIns = tuple.getFalseInstances();
+                List<Instance> trueSet = tuple.getTrueInstances();
+                List<Instance> falseSet = tuple.getFalseInstances();
 
-                // compute purity for each set
-                double pTrue = trueIns.size() / (double) attributes.size();
-                int trueCount = 0;
-                for (Instance ins : trueIns) {
-                    if (ins.getClassName().equals(classes.get(0))) {
+                double trueSize = trueSet.size();
+                double falseSize = falseSet.size();
+
+                double trueCount = 0;
+                for (Instance in : trueSet) {
+                    if (in.getClassName().equals(classes.get(0))) {
                         trueCount++;
                     }
                 }
-                System.out.println(trueCount + "/" + trueIns.size() + "*(" + trueIns.size() + "-"
-                        + trueCount + ")/" + trueIns.size());
-                double trueImp = (trueCount / trueIns.size()) * ((trueIns.size() - trueCount) / trueIns.size());
-                double pFalse = falseIns.size() / (double) attributes.size();
+                double falseCount = trueSet.size() - trueCount;
+                double trueProb = trueSize/(double)instances.size();
+                double trueImpurity = (trueCount/trueSize) * (falseCount/trueSize);
+
                 trueCount = 0;
-                for (Instance ins : trueIns) {
-                    if (ins.getClassName().equals(classes.get(0))) {
+                for (Instance in : falseSet) {
+                    if (in.getClassName().equals(classes.get(1))) {
                         trueCount++;
                     }
                 }
-                double falseImp = (trueCount / falseIns.size()) * ((falseIns.size() - trueCount) / falseIns.size());
-                double weightedImp = (pTrue * trueImp) + (pFalse * falseImp);
+                falseCount = falseSet.size() - trueCount;
+                double falseProb = falseSize/(double)instances.size();
+                double falseImpurity = (trueCount/falseSize) * (falseCount/falseSize);
 
-                if (bestImpurity > weightedImp) {
+                double weightedImpurity = (trueProb * trueImpurity) + (falseProb * falseImpurity);
+                if (weightedImpurity < bestImpurity) {
                     bestAttributeIndex = i;
-                    bestInstTrue = trueIns;
-                    bestInstFalse = falseIns;
+                    bestInstTrue = trueSet;
+                    bestInstFalse = falseSet;
                 }
             }
             List<String> attrRemaining = new ArrayList<String>(attributes);
