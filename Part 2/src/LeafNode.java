@@ -19,7 +19,7 @@ public class LeafNode extends Node{
             System.out.format("%sUnknown\n", indent);
         } else {
             System.out.format("%sClass %s, prob=%4.2f\n",
-                    indent, getClass(), probability);
+                    indent, getName(), probability);
         }
     }
 }
