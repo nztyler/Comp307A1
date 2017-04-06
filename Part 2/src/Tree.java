@@ -33,9 +33,9 @@ public class Tree {
                 }
             }
             if (counter > inst.size() / 2) {
-                return new LeafNode(classes.get(0), counter / inst.size());
+                return new LeafNode(classes.get(0), (double)counter / (double)inst.size());
             } else {
-                return new LeafNode(classes.get(1), counter / inst.size());
+                return new LeafNode(classes.get(1), (double)counter / (double)inst.size());
             }
         }
         if (isPure(instances)) {
@@ -49,9 +49,9 @@ public class Tree {
                 }
             }
             if (counter > (instances.size() / 2)) {
-                return new LeafNode(classes.get(0), counter / instances.size());
+                return new LeafNode(classes.get(0), (double)counter / (double)instances.size());
             } else {
-                return new LeafNode(classes.get(1),counter / instances.size());
+                return new LeafNode(classes.get(1),(double)counter / (double)instances.size());
             }
         }
 
@@ -149,5 +149,6 @@ public class Tree {
         public List<Instance> getFalseInstances() {
             return falseInstances;
         }
+
     }
 }

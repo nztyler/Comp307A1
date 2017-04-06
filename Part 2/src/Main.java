@@ -11,6 +11,8 @@ public class Main {
         Reader reader = new Reader(GTEST);
         Tree tree = new Tree(reader.getInstances(), reader.getAttributes(), reader.getClasses());
         Node root = tree.buildTree();
+
+        root.report("\t");
     }
 
 }
