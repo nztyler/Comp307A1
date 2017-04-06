@@ -70,7 +70,7 @@ public class Tree {
                 int trueCount = 0;
                 for (Instance ins : trueIns) {
                     if (ins.getClassName().equals(classes.get(0))) {
-                    trueCount++;
+                        trueCount++;
                     }
                 }
                 System.out.println(trueCount + "/" + trueIns.size() + "*(" + trueIns.size() + "-"
@@ -137,9 +137,7 @@ public class Tree {
             }
         }
 
-        public List<Instance> getTrueInstances() {
-            return trueInstances;
-        }
+        public List<Instance> getTrueInstances() { return trueInstances; }
 
         public List<Instance> getFalseInstances() {
             return falseInstances;

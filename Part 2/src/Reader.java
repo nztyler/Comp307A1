@@ -36,9 +36,6 @@ public class Reader {
         } catch (IOException | IndexOutOfBoundsException e) {
             e.printStackTrace();
         }
-        for (Instance inst : instances) {
-            System.out.println(inst.toString());
-        }
     }
 
     public List<String> getClasses() {
